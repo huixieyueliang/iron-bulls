@@ -134,7 +134,15 @@
     background:
       radial-gradient(ellipse at 50% 20%, rgba(178,34,34,0.16), transparent 55%),
       linear-gradient(180deg, #0a0a0a 0%, #0d0d0d 100%);
-    padding-top:0;
+    padding:130px 8vw 56px;
+  }
+
+  .hero-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:auto;
+    margin-bottom:auto;
   }
 
   .hero-crest{
@@ -145,10 +153,10 @@
   }
 
   .hero h1{
-    font-size:clamp(48px,9vw,132px);
+    font-size:clamp(40px,9vw,132px);
     font-weight:800;
     letter-spacing:-0.01em;
-    line-height:0.98;
+    line-height:1.05;
     text-transform:uppercase;
     opacity:0;
     animation:fadeUp 1s ease 0.35s forwards;
@@ -181,18 +189,16 @@
   }
 
   .scroll-hint{
-  position:absolute;
-  bottom:40px;
-  left:0;
-  right:0;
-  text-align:center;
-  font-size:11px;
-  letter-spacing:0.3em;
-  color:var(--muted);
-  text-transform:uppercase;
-  opacity:0;
-  animation:fadeUp 1s ease 1.1s forwards;
-}
+    position:static;
+    margin-top:56px;
+    text-align:center;
+    font-size:11px;
+    letter-spacing:0.3em;
+    color:var(--muted);
+    text-transform:uppercase;
+    opacity:0;
+    animation:fadeUp 1s ease 1.1s forwards;
+  }
 
   .scroll-hint::after{
   content:'';
@@ -358,6 +364,7 @@
   .member-photo{
     width:100%;
     aspect-ratio:3/4;
+    flex-shrink:0;
     min-height:260px;
     background:#1a1a1a;
     position:relative;
@@ -671,14 +678,16 @@
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <svg class="hero-crest" viewBox="0 0 64 64" fill="none">
-    <path d="M8 14 C8 14 16 4 20 14 C22 19 20 25 18 28" stroke="#d33a3a" stroke-width="2.4" stroke-linecap="round"/>
-    <path d="M56 14 C56 14 48 4 44 14 C42 19 44 25 46 28" stroke="#d33a3a" stroke-width="2.4" stroke-linecap="round"/>
-    <circle cx="32" cy="36" r="17" stroke="#ededed" stroke-width="1.6"/>
-  </svg>
-  <h1>BLOCK. <span class="brk">BREAK.</span> WIN.</h1>
-  <div class="sub">아이언 불스 · IRON BULLS</div>
-  <div class="debut">2021. __. __ &nbsp;DEBUT</div>
+  <div class="hero-content">
+    <svg class="hero-crest" viewBox="0 0 64 64" fill="none">
+      <path d="M8 14 C8 14 16 4 20 14 C22 19 20 25 18 28" stroke="#d33a3a" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M56 14 C56 14 48 4 44 14 C42 19 44 25 46 28" stroke="#d33a3a" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="32" cy="36" r="17" stroke="#ededed" stroke-width="1.6"/>
+    </svg>
+    <h1>BLOCK. <span class="brk">BREAK.</span> WIN.</h1>
+    <div class="sub">아이언 불스 · IRON BULLS</div>
+    <div class="debut">2021. __. __ &nbsp;DEBUT</div>
+  </div>
   <div class="scroll-hint">SCROLL</div>
 </section>
 
