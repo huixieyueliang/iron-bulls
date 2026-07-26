@@ -363,15 +363,16 @@
 
   .member-photo{
     width:100%;
-    aspect-ratio:3/4;
-    flex-shrink:0;
-    min-height:260px;
-    background:#1a1a1a;
     position:relative;
+    padding-top:133.333%; /* 3:4 ratio, height derived from width via padding — immune to the flex/aspect-ratio bug below */
+    flex-shrink:0;
+    background:#1a1a1a;
     overflow:hidden;
   }
 
   .member-photo img{
+    position:absolute;
+    inset:0;
     width:100%;
     height:100%;
     object-fit:cover;
